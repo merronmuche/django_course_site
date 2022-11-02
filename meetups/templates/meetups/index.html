@@ -10,9 +10,16 @@
 <link rel="stylesheet" href="{% static 'meetups\styles\base.css' %}">
 </head>
 <body>
-    <h1>hello wolrd</h1>
-    <p class="aa">mmmmmmmmmmmmmmmmm</p>
-    <p>{{name}}</p>
-    <p>{{gender}}</p>
+    <h1>hello world</h1>
+    <p>my first reading about django
+    </p>
+    <!-- {% if name == 'markos' %}
+    <h1> Hello Markos</h1>
+    {% else %}
+    <h1>This is not Markos</h1>
+    {% endif %} -->
+   {% if show_meetups %}
+   <h1> {{meetups.0.title}}</h1>
+  {% endif %}
 </body>
 </html>
