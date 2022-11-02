@@ -11,10 +11,18 @@ def index(request):
         'occupation':'Engineer'
     }
     meetups = [
-        {'title':'A First meetup'},
-        {'title':'A Second meetup'}
+        {
+           'title':'A First meetup',
+           'location':'new york','slug':
+           'a_first_meetup'
+        },
+        {
+            'title':'A Second meetup',
+            'location':'paris','slug':
+            'a_second_meetup'
+        }
     ]
 
     return render(request,'meetups/index.html', {
-        'meetups':meetups
-    })
+        'show_meetups': True,
+        'meetups':meetups})
