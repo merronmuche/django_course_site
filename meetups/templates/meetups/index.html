@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <link rel="stylesheet" href="{% static 'meetups\styles\base.css' %}">
+<link rel="stylesheet" href="{% static 'meetups\styles\all-meetups.css' %}">
+
 </head>
 <body>
    <header>
@@ -22,12 +24,21 @@
             {% for meetup_item in meetups %}
             <li class="meetup_item">
                 <article>
-                    {{meetup_item.title}}
+                    <div class="meetup_summary">
+                        <div class="meetup_image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="meetup_details">
+                            <h3>{{meetup_item.title}}</h3>
+                            <address>{{meetup_item.address}}</address>
+                        </div>
+                        <div class="meetup_action">
+                            <a href="" class="btn">more details</a>
+                        </div>
+                    </div>
                 </article>
             </li>
-
             {% endfor %}
-
         </ol>
     </section>
    </main>

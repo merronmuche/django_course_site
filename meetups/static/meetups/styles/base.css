@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 
-p {
-    background-color: red;
-}
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
