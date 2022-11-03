@@ -14,15 +14,19 @@ def index(request):
         {
            'title':'A First meetup',
            'location':'new york',
-           'slug':'a_first_meetup'
+           'slug':'a-first-meetup'
         },
         {
             'title':'A Second meetup',
             'location':'paris',
-            'slug':'a_second_meetup'
+            'slug':'a-second-meetup'
         }
     ]
 
     return render(request,'meetups/index.html', {
         'show_meetups': True,
         'meetups':meetups})
+
+def base(request):
+
+    return render(request, 'meetups/base.html')
