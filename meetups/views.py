@@ -4,12 +4,6 @@ from .models import Meetup
 # Create your views here.
 
 def index(request):
-
-    data = {
-        'name':'mery',
-        'gender': 'M',
-        'occupation':'Engineer'
-    }
     meetups = Meetup.objects.all()
 
     return render(request,'meetups/index.html', {
